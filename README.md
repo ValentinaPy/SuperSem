@@ -11,7 +11,32 @@ Repository for the superlatives dataset from the NAACL 2025 paper: **Superlative
 This repository contains the SuperSem dataset, a collection of superlative expressions annotated with their implicit semantic properties in context. The dataset was introduced in our NAACL 2025 paper "Superlatives in Context: Modeling the Implicit Semantics of Superlatives."
 
 ## Dataset
-The SuperSem dataset includes:
+The SuperSem dataset includes: the full file, called supersem_full.tsv, the train split, called supersem_train.tsv, the test split, supersem_test.tsv, and the dev split, supersem_dev.tsv.
+
+The dataset is provided in TSV format with the following columns:
+
+| Column | Description |
+|--------|-------------|
+| `ID` | Unique identifier for each sentence |
+| `source` | Source domain or corpus of the original text |
+| `context` | The surrounding paragraph or discourse context |
+| `sentence` |  The full sentence containing the superlative expression |
+| `sup_idx_sent` | Index position of the superlative within the sentence  |
+| `sup_idx_context` | Index position of the superlative within the context |
+| `title` | Title of the article or document (if applicable) |
+| `sup_class` | Classification of the superlative type (only for instances from Wikipedia, source of the classes is Silke et al. 2009) |
+| `superlative` |The extracted superlative expression |
+| `turn_idx (only for dialogue)` |  Turn index in dialogue (only for dialogue-based examples) |
+| `target` | The entity that is being described by the superlative |
+| `CS` | Comparison Set - the group of entities being compared  |
+| `Anchor` | Reference point or entity for the comparison |
+| `Property` | The property or dimension along which entities are compared |
+| `Orientation` | Whether the superlative indicates maximum or minimum value|
+| `Implicit` | Binary annotation indicating if there are implicit elements  |
+| `Amount` | Quantity information related to the superlative (if applicable) |
+| `Rank` |  Ranking position indicated by the superlative (if applicable) |
+
+**Note:** Fields marked with `-`, or empty fields, indicate that the specific instance is not a superlative expression (but syntactically tagged as one).
 
 
 ## Citation
